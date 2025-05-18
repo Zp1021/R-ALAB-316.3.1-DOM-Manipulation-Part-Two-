@@ -49,7 +49,6 @@ menuLinks.forEach((link) => {
     // Step 5
     topMenuEl.appendChild(a)
 })
-
 console.log("Hello, world!");
 
 // Lab 2 5/15/2025
@@ -65,7 +64,6 @@ subMenuEl.classList.add('flex-around')
 subMenuEl.style.position = 'absolute'
 // Step 6
 subMenuEl.style.top = '0';
-
 
 // Part 4: Adding Menu Interaction, Step 1:
 const topMenuLinks = topMenuEl.querySelectorAll('a')

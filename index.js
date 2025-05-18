@@ -92,7 +92,7 @@ topMenuEl.addEventListener('click', (event) => {
     if (link !== event.target) {
       link.classList.remove('active')
     // Part 5: Adding Submenu Interaction
-    } else if (event.target.text !== 'about' || event.target.textContent === 'account') {
+    } else if (event.target.textContent !== 'about' || event.target.textContent === 'account') {
       subMenuEl.style.top = '100%'
     } else {
       subMenuEl.style.top = '0'

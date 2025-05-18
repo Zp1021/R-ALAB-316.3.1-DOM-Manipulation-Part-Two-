@@ -80,22 +80,20 @@ topMenuEl.addEventListener('click', (event) => {
   console.log(event.target.textContent)
 
   // Step 4
+  if(event.target.classList.contains('active')){
+    event.target.classList.remove('active')
+    subMenuEl.style.top = '0'
+  } else {
+    
+    event.target.classList.add('active')
+  }
+  // Step 5
   topMenuLinks.forEach(link => {
     if (link !== event.target) {
       link.classList.remove('active')
     }
   })
 
-  if(event.target.classList.contains('active')){
-    event.target.classList.remove('active')
-    subMenuEl.style.top = '0'
-  } else {
-    // Step 5
-    event.target.classList.add('active')
-  }
-
   // Part 5: Adding Submenu Interaction
-  
-  
-
+ 
 })

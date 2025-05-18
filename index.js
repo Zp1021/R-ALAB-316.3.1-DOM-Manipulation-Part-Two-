@@ -66,6 +66,7 @@ subMenuEl.style.position = 'absolute'
 // Step 6
 subMenuEl.style.top = '0';
 
+
 // Part 4: Adding Menu Interaction, Step 1:
 const topMenuLinks = topMenuEl.querySelectorAll('a')
 // Step 2
@@ -90,9 +91,11 @@ topMenuEl.addEventListener('click', (event) => {
   topMenuLinks.forEach(link => {
     if (link !== event.target) {
       link.classList.remove('active')
+    // Part 5: Adding Submenu Interaction
+    } else if (event.target.text !== 'about' || event.target.textContent === 'account') {
+      subMenuEl.style.top = '100%'
+    } else {
+      subMenuEl.style.top = '0'
     }
   })
-
-  // Part 5: Adding Submenu Interaction
- 
 })

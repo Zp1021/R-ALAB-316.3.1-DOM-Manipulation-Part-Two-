@@ -83,8 +83,7 @@ topMenuEl.addEventListener('click', (event) => {
   if(event.target.classList.contains('active')){
     event.target.classList.remove('active')
     subMenuEl.style.top = '0'
-  } else {
-    
+  } else {    
     event.target.classList.add('active')
   }
   // Step 5
